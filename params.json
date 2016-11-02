@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageAccountName": {"value": "alttstorageacc01"},
-        "adminUsername": {"value": "admin"},
+        "adminUsername": {"value": "testuser"},
         "adminPassword": {"value": "Password123"},
         "dnsNameforLBIP": {"value": "ttlb"},
         "vmNamePrefix": {"value": "TTVM"},
