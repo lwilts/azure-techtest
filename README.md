@@ -2,11 +2,11 @@
 My attempt to carry out the Azure flavour of the DevOps technical test.
 
 ## Usage
-`./deploy.sh`
+`./deploy.sh <Azure_resource_group_name>`
 
 ## Prerequisites
 1. Azure CLI is installed and configured with credentials
-2. Resource group 'LWTechTest' is created
+2. The specified resource group is created
 3. jq is installed locally
 
 ## Outcome
@@ -17,7 +17,8 @@ My attempt to carry out the Azure flavour of the DevOps technical test.
 ## Details
 The deploy script runs the folling command:
 
-`azure group deployment create -f deploy.json -e params.json -g LWTechTest -n TechTestDeployment`
+`azure group deployment create -f deploy.json -e params.json -g $1 -n TechTestDeployment`
+(where $1 resolves to the input resource group name)
 
 This uses the resource template 'deploy.json' to provision Azure resources, including
 * Storage account
@@ -30,3 +31,5 @@ This uses the resource template 'deploy.json' to provision Azure resources, incl
 * VM extensions to run the ansible-pull script
 
 The Ansible playbook installs the LEMP stack and places the web page on the server. `ansible-pull` is used over the standard 'push' model of Ansible to allow the web servers to remain inaccessible from the internet. An improvement could be to provision an additional VM as a config management host, and run Ansible from there. This VM could be accessible from the internet and used as a bastion host.
+
+It appears that Ansible complains when you try to add the admin user to sudoers, so this role has been removed from the playbook.
