@@ -1,3 +1,4 @@
 ---
 - name: add web page
   template: src=index.php.j2 dest=/usr/share/nginx/html/index.php owner=root mode=0644
+  become: True

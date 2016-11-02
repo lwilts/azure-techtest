@@ -1,6 +1,5 @@
 ---
 - hosts: local
-  become: True
   roles:
-  - lamp
+  - lemp
   - demo-app

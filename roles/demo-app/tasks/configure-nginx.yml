@@ -1,6 +1,7 @@
 ---
 - name: configure nginx
   template: src=default.j2 dest=/etc/nginx/sites-available/default
+  become: True
 
 - name: restart nginx
   service: name=nginx state=restarted
