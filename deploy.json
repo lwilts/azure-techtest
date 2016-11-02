@@ -348,11 +348,11 @@
 				"autoUpgradeMinorVersion":true,
 				"settings":{
 					"fileUris":[
-						"https://raw.githubusercontent.com/lwilts/azure-techtest/master/arm/setup.sh"
+						"https://raw.githubusercontent.com/lwilts/azure-techtest/master/arm/ansible-pull.sh"
 					]
 				},
 				"protectedSettings":{
-					"commandToExecute":"[concat('bash setup.sh ', parameters('mysqlPassword'))]"
+					"commandToExecute":"bash ansible-pull.sh"
 				}
 			}
 
