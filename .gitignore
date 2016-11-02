@@ -2,3 +2,4 @@
 arm/*~
 ansible/*.retry
 ansible/*~
+*.swp
