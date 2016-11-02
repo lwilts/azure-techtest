@@ -1,0 +1,8 @@
+---
+- name: add admin user to sudoers
+  include_vars: file=params.json name=azureparams
+  user:
+    name: "{{ azureparams.parameters.adminUsername.value }}"
+    groups: sudo
+    append: yes
+
