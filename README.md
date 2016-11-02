@@ -13,7 +13,7 @@ Assuming you have the permissions to do so, resource groups can be created and d
 
 `azure group create <new_resource_group_name> uksouth` (or other location)
 
-`azure group delete <resource_group_name>` (add `q` for promptless)
+`azure group delete <resource_group_name>` (add `-q` for promptless)
 
 ## Outcome
 1. Azure resources are deployed (load balancer, two VMs and supporting infrastructure)
