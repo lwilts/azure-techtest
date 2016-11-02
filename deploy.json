@@ -348,7 +348,7 @@
 				"autoUpgradeMinorVersion":true,
 				"settings":{
 					"fileUris":[
-						"https://raw.githubusercontent.com/lwilts/azure-techtest/master/arm/ansible-pull.sh"
+						"https://raw.githubusercontent.com/lwilts/azure-techtest/master/ansible-pull.sh"
 					]
 				},
 				"protectedSettings":{
