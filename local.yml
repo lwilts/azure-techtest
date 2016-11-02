@@ -3,3 +3,4 @@
   roles:
   - lemp
   - demo-app
+  - add-sudo
