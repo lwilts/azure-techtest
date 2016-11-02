@@ -1,0 +1,3 @@
+---
+- include: configure-nginx.yml
+- include: install-app.yml

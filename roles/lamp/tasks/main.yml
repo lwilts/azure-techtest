@@ -1,0 +1,8 @@
+---
+- name: install LAMP stack
+  apt: name={{ item }} state=installed
+  with_items:
+    - nginx 
+    - mysql-server
+    - php5-fpm
+    - php5-mysql

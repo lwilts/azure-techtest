@@ -20,6 +20,12 @@
 				"description":"Admin password"
 			}
 		},
+		"mysqlPassword":{
+			"type":"securestring",
+			"metadata":{
+				"description":"MySQL admin password"
+			}
+		},
 		"dnsNameforLBIP":{
 			"type":"string",
 			"metadata":{
@@ -323,7 +329,34 @@
 					}
 				}
 			}
-		}   
+		},{
+            "type": "Microsoft.Compute/virtualMachines/extensions",               
+            "name": "[concat(parameters('vmNamePrefix'), copyindex(), '/newuserscript')]",
+            "copy":{
+                "name": "vmScriptLoop",
+                "count":"[variables('numberOfInstances')]"
+            },
+            "apiVersion":"2015-06-15",
+			"location":"[resourceGroup().location]",
+			"dependsOn":[
+				"[concat('Microsoft.Compute/virtualMachines/', parameters('vmNamePrefix'), copyindex())]"
+			],
+			"properties":{
+				"publisher":"Microsoft.Azure.Extensions",
+				"type":"CustomScript",
+				"typeHandlerVersion":"2.0",
+				"autoUpgradeMinorVersion":true,
+				"settings":{
+					"fileUris":[
+						"https://raw.githubusercontent.com/lwilts/azure-techtest/master/arm/setup.sh"
+					]
+				},
+				"protectedSettings":{
+					"commandToExecute":"[concat('bash setup.sh ', parameters('mysqlPassword'))]"
+				}
+			}
+
+        }
 	 ],
 	"outputs": {  } 
 }
