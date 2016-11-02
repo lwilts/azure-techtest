@@ -9,6 +9,12 @@ My attempt to carry out the Azure flavour of the DevOps technical test.
 2. The specified resource group is created
 3. jq is installed locally
 
+Assuming you have the permissions to do so, resource groups can be created and deleted with the following commands:
+
+`azure group create <new_resource_group_name> uksouth` (or other location)
+
+`azure group delete <resource_group_name>` (add `q` for promptless)
+
 ## Outcome
 1. Azure resources are deployed (load balancer, two VMs and supporting infrastructure)
 2. The script 'ansible-pull.sh' is run on each VM, which pulls this repo and runs the local.yml playbook. This installs and configures nginx, MySQL and PHP, and creates the simple web page
