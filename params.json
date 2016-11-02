@@ -2,19 +2,19 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "storageAccountName": {"value": "lwttstorageacc"},
-        "adminUsername": {"value": "luke"},
+        "storageAccountName": {"value": "ttstorageacc"},
+        "adminUsername": {"value": "admin"},
         "adminPassword": {"value": "Password123"},
-        "dnsNameforLBIP": {"value": "lwttlb"},
-        "vmNamePrefix": {"value": "LWTTVM"},
+        "dnsNameforLBIP": {"value": "ttlb"},
+        "vmNamePrefix": {"value": "TTVM"},
         "imagePublisher": {"value": "Canonical"},
         "imageOffer": {"value": "UbuntuServer"},
         "imageSKU": {"value": "14.04.2-LTS"},
-        "lbName": {"value": "LWTTLB"},
+        "lbName": {"value": "TTLB"},
         "mysqlPassword": {"value": "Password123"},
-        "nicNamePrefix": {"value": "lwttnic"},
-        "publicIPAddressName": {"value": "LWTTPubIP"},
-        "vnetName": {"value": "LWTTVNet"},
+        "nicNamePrefix": {"value": "ttnic"},
+        "publicIPAddressName": {"value": "TTPubIP"},
+        "vnetName": {"value": "TTVNet"},
         "vmSize": {"value": "Standard_A1"}
     }
 }

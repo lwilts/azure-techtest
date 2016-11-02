@@ -34,7 +34,7 @@
 		},
 		"vmNamePrefix":{
 			"type":"string",
-			"defaultValue":"LWTTVM",
+			"defaultValue":"TTVM",
 			"metadata":{
 				"description":"Prefix to use for VM names"
 			}
@@ -97,8 +97,8 @@
 		}
 	}, 
     "variables": { 
-        "availabilitySetName": "LWTTAvSet",
-		"subnetName": "LWTTSubnet-1",
+        "availabilitySetName": "TTAvSet",
+		"subnetName": "TTSubnet-1",
 		"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('vnetName'))]",
 		"subnetRef": "[concat(variables('vnetID'),'/subnets/',variables ('subnetName'))]",
 		"publicIPAddressID": "[resourceId('Microsoft.Network/publicIPAddresses',parameters('publicIPAddressName'))]",
