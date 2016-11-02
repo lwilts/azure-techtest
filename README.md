@@ -16,7 +16,9 @@ My attempt to carry out the Azure flavour of the DevOps technical test.
 
 ## Details
 The deploy script runs the folling command:
+
 `azure group deployment create -f deploy.json -e params.json -g LWTechTest -n TechTestDeployment`
+
 This uses the resource template 'deploy.json' to provision Azure resources, including
 * Storage account
 * Availability set
