@@ -1,0 +1,19 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {"value": "LWTTStorageAcc"},
+        "adminUsername": {"value": "luke"},
+        "adminPassword": {"value": "Password123"},
+        "dnsNameforLBIP": {"value": "lwttlb"},
+        "vmNamePrefix": {"value": "LWTTVM"},
+        "imagePublisher": {"value": "Canonical"},
+        "imageOffer": {"value": "UbuntuServer"},
+        "imageSKU": {"value": "14.04.2-LTS"},
+        "lbName": {"value": "LWTTLB"},
+        "nicNamePrefix": {"value": "lwttnic"},
+        "publicIPAddressName": {"value": "LWTTPubIP"},
+        "vnetName": {"value": "LWTTVNet"},
+        "vmSize": {"value": "Basic_A1"}
+    }
+}
