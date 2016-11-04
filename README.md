@@ -1,5 +1,5 @@
-# Azure Technical Assessment
-My attempt to carry out the Azure flavour of the DevOps technical test.
+# Azure/Ansible Demo
+My attempt at the Azure flavour of the DevOps technical test.
 
 ## Usage
 `./deploy.sh <Azure_resource_group_name>`
